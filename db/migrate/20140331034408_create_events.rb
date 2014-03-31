@@ -10,7 +10,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :place
       t.string :place_url
       t.integer :staff_count
-      t.boolean :is_closed
+      t.boolean :is_closed, :null => false, :default => 0
 
       t.timestamps
     end
