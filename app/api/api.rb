@@ -4,6 +4,6 @@ module API
     version 'v1', using: :path
     format :json
 
-    mount Location_API
+    mount Category_API
   end
 end
