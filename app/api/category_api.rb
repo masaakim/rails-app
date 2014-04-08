@@ -1,5 +1,5 @@
 class Category_API < Grape::API
-  resource :location do
+  resource :category do
     get do
       Category.all
     end
