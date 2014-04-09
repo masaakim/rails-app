@@ -1,6 +1,7 @@
 class Event < ActiveRecord::Base
   belongs_to :category
   belongs_to :location
+  belongs_to :assignment
 
   validates :name, presence: true
   validates :description, presence: true
