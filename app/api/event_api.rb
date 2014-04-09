@@ -10,6 +10,8 @@ class Event_API < Grape::API
 
     post do
       Event.create({
+        category_id: params[:category_id],
+        location_id: params[:location_id],
         name: params[:name],
         description: params[:description],
         url: params[:url],
@@ -23,6 +25,8 @@ class Event_API < Grape::API
 
     put ':id' do
       Event.find(params[:id]).update({
+        category_id: params[:category_id],
+        location_id: params[:location_id],
         name: params[:name],
         description: params[:description],
         url: params[:url],
