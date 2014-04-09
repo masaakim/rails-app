@@ -10,13 +10,13 @@ class Principal_API < Grape::API
 
     post do
       Principal.create({
-        name: params[:name]
+        message: params[:message]
       });
     end
 
     put ':id' do
       Principal.find(params[:id]).update({
-        name: params[:name]
+        message: params[:message]
       })
     end
 
