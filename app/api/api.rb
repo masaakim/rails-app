@@ -8,6 +8,9 @@ module API
     mount Location_API
     mount Principal_API
     mount Event_API
+    mount Lesson_API
     mount Mentor_API
+    mount Assignment_API
+    mount Report_API
   end
 end
