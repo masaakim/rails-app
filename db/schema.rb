@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140409091606) do
+ActiveRecord::Schema.define(version: 20140409095625) do
+
+  create_table "assignments", force: true do |t|
+    t.integer  "event_id"
+    t.integer  "mentor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -50,8 +57,32 @@ ActiveRecord::Schema.define(version: 20140409091606) do
     t.datetime "updated_at"
   end
 
+  create_table "mentors", force: true do |t|
+    t.integer  "location_id"
+    t.string   "fb_user_id"
+    t.text     "fb_token"
+    t.text     "fb_token_secret"
+    t.integer  "grade"
+    t.integer  "rank"
+    t.boolean  "is_applicant"
+    t.boolean  "is_addmin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "principals", force: true do |t|
     t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reports", force: true do |t|
+    t.integer  "assignment_id"
+    t.text     "q_1"
+    t.text     "q_2"
+    t.text     "q_3"
+    t.text     "q_4"
+    t.text     "q_secret"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
