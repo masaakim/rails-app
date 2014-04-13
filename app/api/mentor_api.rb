@@ -1,4 +1,14 @@
 class Mentor_API < Grape::API
+
+  post '/login' do
+    if Mentor.find_by(fb_user_id: params[:fb_user_id])
+      session[:current_user] = Mentor.find_by(fb_user_id: params[:fb_user_id])
+      @current_user = session[:current_user]
+    else
+      error!('404 Not found', 404)
+    end
+  end
+
   resource :mentor do
     get do
       Mentor.all
@@ -39,4 +49,3 @@ class Mentor_API < Grape::API
     end
   end
 end
-
