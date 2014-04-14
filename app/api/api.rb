@@ -4,6 +4,10 @@ module API
     version 'v1', using: :path
     format :json
 
+    before do
+      header "Access-Control-Allow-Origin", "*"
+    end
+
     mount Category_API
     mount Location_API
     mount Principal_API

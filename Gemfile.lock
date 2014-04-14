@@ -102,6 +102,9 @@ GEM
     rack (1.5.2)
     rack-accept (0.4.5)
       rack (>= 0.4)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
+    rack-cors (0.2.9)
     rack-mount (0.8.3)
       rack (>= 1.0.0)
     rack-test (0.6.2)
@@ -194,6 +197,8 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   launchy (~> 2.3.0)
+  rack-contrib
+  rack-cors
   rails (= 4.0.4)
   rspec-rails (~> 2.14.0)
   sass-rails (~> 4.0.2)

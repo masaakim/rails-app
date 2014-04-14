@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 1.2'
 # REST API micro FW
 gem 'grape'
 
+gem 'rack-cors', :require => 'rack/cors'
+gem 'rack-contrib'
+
 # Test libraries
 group :development, :test do
   gem "rspec-rails", "~> 2.14.0"
