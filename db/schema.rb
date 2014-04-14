@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140409095625) do
+ActiveRecord::Schema.define(version: 20140414100605) do
 
   create_table "assignments", force: true do |t|
     t.integer  "event_id"
@@ -62,12 +62,13 @@ ActiveRecord::Schema.define(version: 20140409095625) do
     t.string   "fb_user_id"
     t.text     "fb_token"
     t.text     "fb_token_secret"
-    t.integer  "grade"
-    t.integer  "rank"
-    t.boolean  "is_applicant"
     t.boolean  "is_addmin"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "grade",           default: 1
+    t.integer  "rank",            default: 1
+    t.boolean  "is_applicant",    default: false
+    t.boolean  "is_admin",        default: false
   end
 
   create_table "principals", force: true do |t|

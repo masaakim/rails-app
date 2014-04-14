@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Mentor do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "is invalid without fb_user_id"
+  it "is invalid without fb_token"
+  it "is invalid without fb_token_secret"
+  it "is invalid without grape"
+  it "is invalid without rank"
 end
